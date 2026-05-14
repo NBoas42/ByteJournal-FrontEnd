@@ -1,0 +1,6 @@
+{
+    "folders": [
+      { "path": ".", "name": "Full Project" },
+      { "path": "src", "name": "Src" }
+    ]
+  }
