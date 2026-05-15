@@ -1,8 +1,19 @@
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useCounterStore = defineStore('counter', () => {
+export const AccountStore = defineStore('counter', () => {
 
+  const email = ref('');
+  const password = ref('');
 
-  return { }
+  const login = async ()=> {
+    console.log(email.value, password.value);
+    password.value = '';
+  }
+
+  return { 
+    email, 
+    password,
+    login 
+  }
 })

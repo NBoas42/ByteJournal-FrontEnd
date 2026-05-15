@@ -9,16 +9,16 @@
 
 <script setup lang="ts">
 import LoginForm from '@/components/account/LoginForm.vue'
-
 </script>
 
 <style scoped>
-@import "tailwindcss";
+@reference "../App.css";
 
 .login-wrapper {
     /*Positioning*/ @apply flex items-center justify-start; /*items is vertical and justify is horizontal*/
     /*size*/        @apply h-screen w-screen;
 }
+
 .pane-left {
     /*size*/        @apply h-screen w-1/2;
     /*color*/       @apply bg-linear-to-br from-indigo-700 to-purple-700;
