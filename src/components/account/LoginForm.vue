@@ -8,7 +8,7 @@
             <InputGroupAddon>
                 <MailIcon />
             </InputGroupAddon>
-            <InputGroupInput type="email" placeholder="Enter your email" v-model="accountStore.email" />
+            <InputGroupInput type="email" placeholder="Enter your email" v-model="authStore.email" />
         </InputGroup>
 
         <label class='login-form-label'>Password</label>
@@ -16,10 +16,12 @@
             <InputGroupAddon>
                 <LockIcon />
             </InputGroupAddon>
-            <InputGroupInput type="password" placeholder="Enter your password"  v-model="accountStore.password"/>
+            <InputGroupInput type="password" placeholder="Enter your password"  v-model="authStore.password"/>
         </InputGroup>
 
-        <Button class="login-button" @click="accountStore.login()">Sign in</Button>
+        <Button class="login-button" @click="authStore.login()">Sign in</Button>
+        <span class="signup-link-span">Don't have an account? <a class="signup-link" href="/register">Sign up</a></span>
+        <span class= 'invalid-email-password-span' v-if="!authStore.token && authStore.loginAttempted">Invalid email or password</span>
     </div>
 </template>
 
@@ -27,9 +29,9 @@
 import { Button } from '@/components/ui/button'
 import { MailIcon, LockIcon } from 'lucide-vue-next'
 import { InputGroup, InputGroupAddon, InputGroupInput } from '@/components/ui/input-group'
-import { AccountStore } from '@/stores/account';
+import { AuthStore } from '@/stores/auth';
 
-const accountStore = AccountStore();
+const authStore = AuthStore();
 </script>
 
 <style scoped>
@@ -53,14 +55,27 @@ const accountStore = AccountStore();
     /*margin*/ @apply mt-6;
     /*position*/ @apply self-start;
 }
+
 .login-form-password-input {
     /*margin*/ @apply mb-3;
+    /*color*/ @apply bg-white;
 }
 
 .login-button {
     /*size*/   @apply w-full;
     /*margin*/ @apply mt-6;
-    /*color*/ @apply bg-indigo-700;
+    /*color*/ @apply bg-red-500;
     /*border*/ @apply rounded-md;
+}
+
+.signup-link-span {
+    /*margin*/ @apply mt-3;
+}
+
+.signup-link {
+    /*color*/ @apply text-blue-500;
+}
+.invalid-email-password-span {
+    /*color*/ @apply text-red-500;
 }
 </style>

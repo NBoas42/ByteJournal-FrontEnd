@@ -1,6 +1,8 @@
 <template>
     <div class="login-wrapper">
-        <div class="pane-left"/>
+        <div class="pane-left">
+            <img src="/public/logo.png" class="logo-image">
+        </div>
         <div class="pane-right">
             <LoginForm />
         </div>
@@ -15,19 +17,24 @@ import LoginForm from '@/components/account/LoginForm.vue'
 @reference "../App.css";
 
 .login-wrapper {
-    /*Positioning*/ @apply flex items-center justify-start; /*items is vertical and justify is horizontal*/
+    /*Positioning*/ @apply flex flex-row items-center justify-start; /*items is vertical and justify is horizontal*/
     /*size*/        @apply h-screen w-screen;
 }
 
 .pane-left {
+    /*Positioning*/ @apply flex flex-col items-center justify-center; /*items is main axis and justify is cross axis*/
     /*size*/        @apply h-screen w-1/2;
-    /*color*/       @apply bg-linear-to-br from-indigo-700 to-purple-700;
+    /*color*/       @apply bg-linear-to-br from-cyan-700 to-cyan-950;
 }
 
 .pane-right {
-    /*Positioning*/ @apply flex items-center justify-center; /*items is vertical and justify is horizontal*/
+    /*Positioning*/ @apply flex flex-col items-center justify-center; /*items is vertical and justify is horizontal*/
     /*size*/        @apply h-screen w-1/2;
-    /*color*/       background-color: #f8f8f8;
+    /*color*/       @apply bg-white;
+}
+
+.logo-image {
+    /*size*/ @apply w-1/3;
 }
 </style>
 
