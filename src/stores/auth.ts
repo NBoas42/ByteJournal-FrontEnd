@@ -1,6 +1,7 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import router from '@/router';
+import { useSessionStorage } from "@vueuse/core"
 
 const BACKEND_URL = import.meta.env.VITE_API_BYTE_JOURNAL_BACKEND;
 
@@ -8,7 +9,7 @@ export const AuthStore = defineStore('counter', () => {
 
   const email = ref('');
   const password = ref('');
-  const token = ref(undefined);
+  const token = useSessionStorage('token', undefined);
   const loginAttempted = ref(false);
 
   const login = async ()=> {
@@ -27,7 +28,7 @@ export const AuthStore = defineStore('counter', () => {
 
     if(response.status === 200) {
       email.value = '';
-      token.value = data;
+      token.value = data.data;
       router.push('/dashboard');
     }
     
