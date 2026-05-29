@@ -19,6 +19,10 @@ const router = createRouter({
     component: Dashboard
   },
   {
+    path: '/',
+    component: Dashboard
+  },
+  {
     name: 'NotFound',
     path: '/not-found',
     component: NotFound
