@@ -35,8 +35,6 @@ router.beforeEach(async (to) => {
   const authRequired = !publicPages.includes(to.path);
   const auth = AuthStore();
 
-  console.log(authRequired, auth.token, to.path, !router.getRoutes().find(route => route.path === to.path));
-
   if (authRequired && !auth.token) {
     return '/login'
   }
