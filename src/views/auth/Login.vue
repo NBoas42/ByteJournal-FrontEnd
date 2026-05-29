@@ -10,11 +10,11 @@
 </template>
 
 <script setup lang="ts">
-import LoginForm from '@/components/account/LoginForm.vue'
+import LoginForm from '@/components/auth/LoginForm.vue'
 </script>
 
 <style scoped>
-@reference "../App.css";
+@reference "../../App.css";
 
 .login-wrapper {
     /*Positioning*/ @apply flex flex-row items-center justify-start; /*items is vertical and justify is horizontal*/

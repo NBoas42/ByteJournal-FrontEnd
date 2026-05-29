@@ -2,9 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import { AuthStore } from '@/stores/auth';
 
-import Login from '@/views/Login.vue'
-import Dashboard from '@/views/Dashboard.vue'
-import NotFound from '@/views/NotFound.vue';
+import Login from '@/views/auth/Login.vue'
+import Dashboard from '@/views/journal/Dashboard.vue'
+import NotFound from '@/views/misc/NotFound.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

@@ -8,5 +8,5 @@
 </script>
 
 <style scoped>
-@reference "../App.css";
+@reference "../../App.css";
 </style>
