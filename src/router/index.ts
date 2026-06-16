@@ -20,7 +20,7 @@ const router = createRouter({
   },
   {
     path: '/',
-    component: Dashboard
+    redirect: '/dashboard'
   },
   {
     name: 'NotFound',
