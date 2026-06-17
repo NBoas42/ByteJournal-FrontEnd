@@ -1,15 +1,9 @@
 <template>
-    <div class="dashboard-container">
-        <SideNavBar />
-        <div class="dashboard-wrapper">
-            <h1>Dashboard</h1>
-            Hello
-        </div>
-    </div>
+    <h1>Dashboard</h1>
+    Hello
 </template>
 
 <script setup lang="ts">
-import SideNavBar from '@/components/nav/SideNavBar.vue';
 </script>
 
 <style scoped>

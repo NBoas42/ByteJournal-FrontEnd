@@ -5,7 +5,7 @@
                 <div :class="dashBoardButtonClass" @click="handleDashboardButtonClick">
                     <HomeIcon class="nav-button-icon"/>
                     <p class="nav-button-text">Dashboard</p>
-                </div>
+                </div> 
                 <div :class="searchButtonClass" @click="handleSearchButtonClick">
                     <Search class="nav-button-icon" />
                     <p class="nav-button-text">Search Entries</p>
@@ -26,6 +26,7 @@ import { computed, ref } from 'vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
+const NotAllowedRoutes = ['/login', '/not-found'];
 
 const dashboardButtonSelected = computed(()=> router.currentRoute.value.path === '/dashboard');
 const searchButtonSelected = computed(()=> router.currentRoute.value.path === '/search');
