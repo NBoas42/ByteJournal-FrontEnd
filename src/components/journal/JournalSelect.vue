@@ -5,13 +5,13 @@
                 <SelectValue placeholder="Select a Journal" />
             </SelectTrigger>
             <SelectContent>
-                <SelectItem v-for="journal in journals">{{journal.name}}</SelectItem>
+                <SelectItem v-for="journal in journals" :key="journal.name" :value="journal.name" >{{journal.name}}</SelectItem>
             </SelectContent>
         </Select>
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
     import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
     const journals = [{name: 'Journal 1'}, {name: 'Journal 2'}, {name: 'Journal 3'}];
 

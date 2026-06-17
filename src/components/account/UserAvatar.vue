@@ -11,7 +11,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const account = {
