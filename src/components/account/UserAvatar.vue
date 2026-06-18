@@ -21,7 +21,7 @@ const account = {
 </script>
 
 <style scoped>
-@reference "../../App.css";
+@reference "#app.css";
 
 .user-avatar-wrapper {
     @apply flex flex-row items-center justify-start;

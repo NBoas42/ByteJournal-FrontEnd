@@ -57,7 +57,7 @@ const handleSettingsButtonClick = () => {
 
 
 <style scoped>
-@reference "../../App.css";
+@reference "#app.css";
 .nav-button-icon {
     /*margin*/ @apply mr-2;
     /*size*/   @apply size-4;

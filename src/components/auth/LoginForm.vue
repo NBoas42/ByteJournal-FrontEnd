@@ -35,7 +35,7 @@ const authStore = AuthStore();
 </script>
 
 <style scoped>
-@reference "../../App.css";
+@reference "#app.css";
 
 .login-form-wrapper {
     /*Positioning*/ @apply inline-flex flex-col items-center;

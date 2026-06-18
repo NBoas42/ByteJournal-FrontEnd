@@ -18,7 +18,7 @@
 </script>
 
 <style scoped>
-@reference "../../App.css";
+@reference "#app.css";
 
 .journal-select-wrapper {
 

@@ -24,7 +24,7 @@ const shouldShowSideNavBar = computed(()=> !ProhibitedRoutes.includes(router.cur
 </script>
 
 <style scoped>
-@reference "../../App.css";
+@reference "#app.css";
 
 .top-nav-bar-wrapper {
     /*Positioning*/ @apply flex flex-col items-center justify-start; /*items is vertical and justify is horizontal*/

@@ -12,7 +12,7 @@
 </script>
 
 <style scoped>
-@reference "./App.css";
+@reference "#app.css";
 
 .dashboard-container {
     @apply flex flex-row justify-start;

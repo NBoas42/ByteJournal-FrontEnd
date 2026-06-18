@@ -7,7 +7,7 @@
 </template>
 
 <style scoped>
-@reference "../../App.css";
+@reference "#app.css";
 
 .not-found-wrapper {
     @apply flex flex-col items-center justify-center;
