@@ -14,7 +14,7 @@
 .notes-create-card-wrapper {
     @apply w-full h-full;
     @apply bg-white;
-    @apply shadow-lg;
+    @apply border border-gray-400 shadow-inner;
     @apply rounded-md;
 }
 </style>
