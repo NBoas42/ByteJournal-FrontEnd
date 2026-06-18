@@ -8,7 +8,7 @@
                 </div> 
                 <div :class="searchButtonClass" @click="handleSearchButtonClick">
                     <Search class="nav-button-icon" />
-                    <p class="nav-button-text">Search Entries</p>
+                    <p class="nav-button-text">Search Journal</p>
                 </div>
                 <div :class="settingsButtonClass" @click="handleSettingsButtonClick">
                     <Settings class="nav-button-icon"/>
